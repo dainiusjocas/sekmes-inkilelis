@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8"/>
+        <title>Sėkmės inkilėlis</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css"> 
+        <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    </head>
+    <body>
+        <!-- Uses a transparent header that draws on top of the layout's background -->
+        <style>
+        .demo-layout-transparent {
+          background: url('img/background.jpg') center / cover;
+          background-color: white;
+        }
+        .demo-layout-transparent .mdl-layout__header,
+        .demo-layout-transparent .mdl-layout__drawer-button {
+          /* This background is dark, so we set text to white. Use 87% black instead if
+             your background is light. */
+          color: black;
+        }
+        .nav-button {
+            color: black;
+            text-transform: none;
+        }
+        footer.mdl-layout__content {
+            background-color: black;
+        }
+        .mdl-fab-bottom-right {
+            position: fixed;
+            bottom: 140px;
+            right: 24px;
+            transition: bottom .25s cubic-bezier(0,0,.2,1);
+        }
+        </style>
+        
+        <div class="demo-layout-transparent mdl-layout mdl-js-layout mdl-layout--fixed-header">
+          <header class="mdl-layout__header mdl-layout__header--transparent">
+            <div class="mdl-layout__header-row">
+              <!-- Title -->
+              <span class="mdl-layout-title">Sėkmės inkilėlis</span>
+              <!-- Add spacer, to align navigation to the right -->
+              <div class="mdl-layout-spacer"></div>
+              <!-- Navigation -->
+              <nav class="mdl-navigation mdl-layout--large-screen-only">
+                <button id="navigation-button-information" class="mdl-button mdl-js-button nav-button">
+                    Informacija
+                </button>
+                <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
+                    for="navigation-button-information">
+                    <li class="mdl-menu__item">Apie projektą</li>
+                    <li class="mdl-menu__item">Kaip įsigyti</li>
+                    <li class="mdl-menu__item">Talentai</li>
+                    <li class="mdl-menu__item">Paraiška</li>
+                </ul>
+                <button id="navigation-button-vilnius" class="mdl-button mdl-js-button nav-button">
+                    Vilnius
+                </button>
+                <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
+                    for="navigation-button-vilnius">
+                    <li class="mdl-menu__item">2014</li>
+                    <li class="mdl-menu__item">2015</li>
+                    <li class="mdl-menu__item">2016</li>
+                    <li class="mdl-menu__item">2017</li>
+                    <li class="mdl-menu__item">2018</li>
+                    <li class="mdl-menu__item">2019</li>
+                </ul>
+                <button id="navigation-button-kaunas" class="mdl-button mdl-js-button nav-button">
+                    Kaunas
+                </button>
+                <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
+                    for="navigation-button-kaunas">
+                    <li class="mdl-menu__item">2016</li>
+                    <li class="mdl-menu__item">2017</li>
+                    <li class="mdl-menu__item">2019</li>
+                </ul>
+                <button id="navigation-button-klaipėda" class="mdl-button mdl-js-button nav-button">
+                    Klaipėda
+                </button>
+                <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
+                    for="navigation-button-klaipėda">
+                    <li class="mdl-menu__item">2016</li>
+                    <li class="mdl-menu__item">2017</li>
+                    <li class="mdl-menu__item">2018</li>
+                    <li class="mdl-menu__item">2019</li>
+                </ul>
+                <button id="navigation-button-siauliai" class="mdl-button mdl-js-button nav-button">
+                    Šiauliai
+                </button>
+                <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
+                    for="navigation-button-siauliai">
+                    <li class="mdl-menu__item">2016</li>
+                    <li class="mdl-menu__item">2017</li>
+                    <li class="mdl-menu__item">2018</li>
+                    <li class="mdl-menu__item">2019</li>
+                </ul>
+                <button id="navigation-button-marijampole" class="mdl-button mdl-js-button nav-button">
+                    Marijampolė
+                </button>
+                <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
+                    for="navigation-button-marijampole">
+                    <li class="mdl-menu__item">2016</li>
+                </ul>
+              </nav>
+            </div>
+          </header>
+          <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">Sėkmės inkilėlis</span>
+            <nav class="mdl-navigation">
+              <a id="drawer-navigation-information" class="mdl-navigation__link" href="#">Informacija</a>
+              <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                for="drawer-navigation-information">
+                <li class="mdl-menu__item">Apie projektą</li>
+                <li class="mdl-menu__item">Kaip įsigyti</li>
+                <li class="mdl-menu__item">Talentai</li>
+                <li class="mdl-menu__item">Paraiška</li>
+              </ul>
+              <a id="drawer-navigation-vilnius" class="mdl-navigation__link" href="#">Vilnius</a>
+              <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                for="drawer-navigation-vilnius">
+                <li class="mdl-menu__item">2014</li>
+                <li class="mdl-menu__item">2015</li>
+                <li class="mdl-menu__item">2016</li>
+                <li class="mdl-menu__item">2017</li>
+                <li class="mdl-menu__item">2018</li>
+                <li class="mdl-menu__item">2019</li>
+              </ul>
+              <a id="drawer-navigation-kaunas" class="mdl-navigation__link" href="#">Kaunas</a>
+              <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                for="drawer-navigation-kaunas">
+                <li class="mdl-menu__item">2016</li>
+                <li class="mdl-menu__item">2017</li>
+                <li class="mdl-menu__item">2019</li>
+              </ul>
+              <a id="drawer-navigation-klaipeda" class="mdl-navigation__link" href="#">Klaipėda</a>
+              <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                for="drawer-navigation-klaipeda">
+                <li class="mdl-menu__item">2016</li>
+                <li class="mdl-menu__item">2017</li>
+                <li class="mdl-menu__item">2018</li>
+                <li class="mdl-menu__item">2019</li>
+              </ul>
+              <a id="drawer-navigation-siauliai" class="mdl-navigation__link" href="#">Šiauliai</a>
+              <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                for="drawer-navigation-siauliai">
+                <li class="mdl-menu__item">2016</li>
+                <li class="mdl-menu__item">2017</li>
+                <li class="mdl-menu__item">2018</li>
+                <li class="mdl-menu__item">2019</li>
+              </ul>
+              <a id="drawer-navigation-marijampole" class="mdl-navigation__link" href="#">Marijampolė</a>
+              <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                for="drawer-navigation-marijampole">
+                <li class="mdl-menu__item">2016</li>
+              </ul>
+            </nav>
+          </div>
+          <main class="mdl-layout__content">
+            <div class="mdl-fab-bottom-right bottom right">
+              <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored md-fab-bottom-right">
+                 <i class="material-icons">add_shopping_cart</i>
+              </button>
+            </div>
+          </main>
+          <footer class="mdl-mini-footer">
+            <div class="mdl-mini-footer__left-section">
+              <div class="mdl-logo">
+                &copy; 2019 Sėkmės inkilėlis
+              </div>
+            </div>
+          </footer>  
+        </div>
+    </body>
+</html>
