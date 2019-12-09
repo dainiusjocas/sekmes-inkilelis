@@ -364,7 +364,7 @@
             onclick="toggleBuyWindow()"
             class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored md-fab-bottom-right"
           >
-            <i class="material-icons">add_shopping_cart</i>
+            <i id="buy-button-icon" class="material-icons">add_shopping_cart</i>
           </button>
         </div>
       </main>
@@ -381,8 +381,10 @@
         var a = document.getElementById("buy-window").style.visibility
         if (a === "hidden") {
           document.getElementById("buy-window").style.visibility = "visible";
+          document.getElementById("buy-button-icon").innerHTML= "close";
         } else {
           document.getElementById("buy-window").style.visibility = "hidden";
+          document.getElementById("buy-button-icon").innerHTML= "add_shopping_cart";
         }
       }
     </script>
